@@ -1,5 +1,5 @@
 # set the base image to create the image for react app
-FROM node:25-alpine
+FROM node:2-alpine
 
 # create a user with permissions to run the app
 # -S -> create a system user
@@ -34,7 +34,7 @@ RUN chown -R app:app .
 USER app
 
 # install dependencies
-RUN pnpm install
+RUN npm install
 
 # copy the rest of the files to the working directory
 COPY . .
@@ -43,4 +43,4 @@ COPY . .
 EXPOSE 5173
 
 # command to run the app
-CMD pnpm run dev
+CMD npm run dev
