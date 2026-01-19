@@ -1,0 +1,9 @@
+# run react app and enable changes
+
+docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
+
+# how to publish the docker image to docker hub
+
+- docker login
+- docker tag react-docker ommybuilds/react-docker
+- docker push ommybuilds/react-docker
