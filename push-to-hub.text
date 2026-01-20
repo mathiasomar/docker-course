@@ -1,0 +1,3 @@
+- docker login
+- docker tag image-name username/repository
+- docker push username/repisotory
